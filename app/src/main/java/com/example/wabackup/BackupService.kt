@@ -16,6 +16,7 @@ import java.io.File
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential
 import com.google.api.services.drive.Drive
 import kotlinx.coroutines.*
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
 
 class BackupService : Service() {
     private val serviceScope = CoroutineScope(Dispatchers.IO + Job())
