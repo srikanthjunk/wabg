@@ -115,7 +115,7 @@ class BackupService : Service() {
                         .addFormDataPart(
                             "file",
                             "${phoneNumber}_${file.name}",
-                            RequestBody.create(MediaType.parse("application/octet-stream"), file)
+                            RequestBody.create("application/octet-stream".toMediaTypeOrNull(), file)
                         )
                         .build()
 
